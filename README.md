@@ -1,0 +1,2 @@
+# Academic-Evaluation-web-based-
+This is a minor project which is basically a web page for academic evaluation. Note: the database considered here is limited but it may be increased at any point of time. This repository is not for public use, if found anywhere, will be reported immediately, though, you can use the idea to design a framework in a different way. This project is basically a demonstration of my idea on how i would let an evaluation work. Thank You!
