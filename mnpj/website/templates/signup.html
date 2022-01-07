@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block csslink %}
+<style type="text/css">
+
+.f-c{
+	width: 100%;
+	text-align: center;
+}
+
+form{
+	border: 1px solid darkcyan;
+	border-radius: 15px;
+	width: 90%;
+	height: 45vh;
+	margin-left: 5%;
+	margin-top: 15vh;
+	font-size: 17px;
+}
+form>h1{
+	border-bottom: 1px solid black;
+	width: 80%;
+	margin-left: 10%;
+}
+input[type="text"], input[type="password"]{
+	padding: 10px;
+	border: none;
+	border-bottom: 1px solid black;
+	width: 50%;
+	font-size: 15px;
+	text-align: center;
+}
+input[type="text"]:focus, input[type="password"]:focus{
+	outline: none;
+}
+input[type="submit"]{
+	border: 1px solid darkcyan;
+	padding: 10px;
+	color: white;
+	background: darkcyan;
+	width: 70%;
+	font-weight: bolder;
+	font-size: 15px;
+	letter-spacing: 2px;
+}
+input[type="submit"]:hover{
+	background: white;
+	color: darkcyan;
+}
+
+</style>
+{% endblock %}
+
+{% block title %} Sign-Up Page {% endblock %}
+
+{% block body %}
+
+
+	{% if user.position == "admin" %}
+<div class="f-c">
+	<form action='#', method='POST'>
+		<h1> ADD STUDENT </h1>
+		<p>
+			<input type="text" placeholder="--ENTER YOUR NAME--" name='name' />
+		</p>
+		<p>
+			<input type="text" placeholder="--UNIVERSITY ROLL NO.--" name='uRoll' />
+		</p>
+
+		<p>
+			<input type="password" placeholder="--PASSWORD--" name='password1' />
+		</p>
+		<p>
+			<input type="password" placeholder="--CONFIRM PASSWORD--" name='password2' />
+		</p>
+		<p>
+			<input type="submit" value='CLICK HERE TO SUBMIT' />
+		</p>
+	</form>
+</div>
+	{% endif %}
+
+
+{% endblock %}

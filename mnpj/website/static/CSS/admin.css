@@ -1,0 +1,52 @@
+html,
+body{
+	/*background: darkred;*/
+}
+
+.main-container{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+/*.table-form{
+	border: 2px solid darkcyan;
+	width: 400px;
+	text-align: center;
+	font-size: 22px;
+}*/
+
+form{
+	border: 2px solid darkcyan;
+	border-radius: 10px;
+	margin: 270px 520px 300px 520px;
+	height: 250px;
+}
+
+form input{
+	padding: 10px;
+	font-size: 17px;
+	margin: 10px;
+	text-align: center;
+	width: 88%;
+	border: none;
+	border-bottom: 1px solid black;
+}
+
+form input[type="submit"]{
+	border: 1px solid darkcyan;
+	background: darkcyan;
+	color: white;
+	font-weight: bolder;
+}
+
+form input[type="submit"]:hover{
+	background: white;
+	color: darkcyan;
+}
+
+form input[type="text"]:focus, form input[type="password"]:focus{
+	outline: none;
+	background: #FFFADA;
+	border-radius: 10px;
+}

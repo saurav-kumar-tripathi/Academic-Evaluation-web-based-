@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block title %} Home Page {% endblock %}
+
+{% block body %}
+
+<style>
+  .w-100 {
+  width: 100% !important;
+  height: 75vh;
+}
+</style>
+
+<!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://images.unsplash.com/photo-1579353977828-2a4eab540b9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1600716051809-e997e11a5d52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c2FtcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1612528443702-f6741f70a049?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div> -->
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/../media/img1.jpeg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1600716051809-e997e11a5d52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c2FtcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1612528443702-f6741f70a049?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+	<form action='#' method='POST' class="s-l" autocomplete="off">
+		<p>
+			<input type="text" placeholder="--UNIVERSITY ROLL NO.--" name='uRoll' />
+		</p>
+		<p>
+			<input type="password" placeholder="--PASSWORD--" name='password' />
+		</p>
+		<p>
+			<input type="submit" value='LOGIN' />
+		</p>
+		<!-- <p>
+			<a href="/signup"> --or click here to sign-up-- </a>
+		</p> -->
+	</form>
+
+	<div class="home-left card">
+    <div class="card-body">
+		<h1 class="card-title">About Me</h1>
+		<p class="card-text">
+			Hello! My name is Saurav Kumar Tripathi and I am persuing Bachelor's degree in CSE core from Graphic Era University. Elements used in this project are:-
+				<p style="text-shadow: 0 0 5px aquamarine;">Flask-Python, 
+			    HTML5, 
+				  CSS3, 
+				  SQLite Database (embeded in Flask)</p>
+			
+			So far I have added the folowing functionalities:-
+				<p>admin can add students and their details</p>
+				<p>admin can delete student details</p>
+				<p>students can view their details such as cgpa, sgpa, and other personal details</p>
+				<p>all the marks and sgpas are mentioned semester wise in score cards</p>
+		</p>
+    </div>
+	</div>
+	<!-- <div class="home-news">
+		<p class="news">
+			<h4 class="news-h">End Term Examination</h4>
+			<p class="news-b">End Term of 5th semester starts on 25th November 2021</p>
+		</p>
+		<p class="news">
+			<h4 class="news-h">Project Mentor</h4>
+			<p class="news-b">This project is assigned by Pankaj Sir.</p>
+		</p>
+	</div> -->
+  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+{% endblock %}

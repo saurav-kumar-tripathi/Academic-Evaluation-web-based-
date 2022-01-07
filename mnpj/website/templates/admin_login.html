@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block csslink %}<link rel="stylesheet" type="text/css" href="../static/CSS/admin.css" />{% endblock %}
+{% block title %} Admin Login {% endblock %}
+
+{% block body %}
+
+	<form action='#' method='POST' autocomplete="off">
+		<p>
+			<input type="text" placeholder="--USERNAME--" name='username' />
+		</p>
+		<p>
+			<input type="password" placeholder="--PASSWORD--" name='password' />
+		</p>
+		<p>
+			<input type="submit" value='SUBMIT' />
+		</p>
+	</form>
+	
+
+{% endblock %}

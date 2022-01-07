@@ -1,0 +1,157 @@
+html,
+body{
+	/*background: red;*/
+	scroll-behavior: smooth;
+}
+
+.flashed-message{
+	position: fixed;
+	top: 0;
+	padding: 3px;
+	border-bottom: 1px solid darkred;
+	color: darkred;
+	background: #ffffff;
+	width: 100vw;
+	text-align: center;
+}
+
+/*NAVIGATION BAR*/
+
+.container{
+	width: 80%;
+	margin: auto;
+	margin-top: 0;
+	overflow: hidden;
+}
+nav ul{
+	margin: 0;
+	padding: 0;
+}
+header{
+	background: #35424a;
+	color: #ffffff;
+	padding-top: 30px;
+	margin-top: -39px;
+	min-height: 70px;
+	border-bottom: 3px solid #e8491d;
+	text-transform: uppercase;
+}
+header a{
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: bold;
+}
+header li{
+	float: left;
+	display: inline;
+	padding: 0 20px 0 20px;
+}
+header #branding{
+	float: left;
+}
+header #branding h1{
+	margin: 0;
+}
+header nav{
+	float: right;
+	margin-top: 10px;
+}
+header .highlight, header .current a{
+	color: #e8491d;
+	font-weight: bold;
+}
+header a:hover{
+	color: #e8491d;
+	/*color: #cccccc;*/
+	font-weight: bold;
+}
+
+/*FOOTER*/
+
+footer{
+	padding: 20px;
+	margin-top: 20px;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	color: #ffffff;
+	background-color: #e8491d;
+	text-align: center;
+}
+
+.s-l{
+	float: right;
+	width: 24%;
+	border-left: 2px solid black;
+	padding: 30px;
+	margin-right: 70px;
+	margin-top: 45px;
+	text-align: center;
+}
+.s-l input{
+	text-align: center;
+	border: none;
+	border-bottom: 1px solid black;
+	font-size: 18px;
+	padding: 10px;
+	margin: 10px;
+}
+.s-l input[type="submit"]{
+	width: 100%;
+	border: none;
+	border: 1px solid darkcyan;
+	background: darkcyan;
+	color: #ffffff;
+}
+.s-l input[type="submit"]:hover{
+	background: #ffffff;
+	color: darkcyan;
+}
+
+.s-l input[type="text"]:focus, form input[type="password"]:focus{
+	outline: none;
+	background: #FFFADA;
+	border-radius: 10px;
+}
+
+.home-left{
+	text-align: center;
+	padding: 10px;
+	margin: 20px;
+	float: left;
+	width: 55%;
+  background-color: #404040;
+  color: white;
+}
+.home-left h1{
+	font-size: 45px;
+  text-transform: uppercase;
+  text-shadow: 0 0 7px white;
+}
+.home-left p{
+	font-size: 17px;
+}
+
+.home-news{
+	height: 270px;
+	overflow: scroll;
+	margin: 20px;
+	padding: 10px;
+	border: 1px solid rgb(240, 240, 240);
+	position: absolute;
+	bottom: 100px;
+	width: 76%;
+	text-align: center;
+	background: rgb(240, 240, 240);
+}
+.news{
+	border-bottom: 1px solid #404040;
+}
+.news-h{
+
+}
+.news-b{
+
+}

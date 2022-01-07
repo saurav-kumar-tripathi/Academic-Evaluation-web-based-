@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block csslink %}<link rel="stylesheet" type="text/css" href="../static/CSS/student.css" />{% endblock %}
+{% block title %} Student Page {% endblock %}
+
+{% block body %}
+
+	<br/>
+<div class="personal-details">
+	<p> Name: {{user.username}}<br/><br/>
+		University Roll Number: {{user.university_roll}}<br/><br/>
+		Enrollment Roll Number: {{user.id+1900}}<br/><br/>
+		Date of Enrollment: {{user.date_created.date()}}<br/><br/>
+		CGPA: {{cgpa}}
+</div>
+
+<div class="acadmic-details">
+	{% for semester in semesters %}
+	{% if semester.author == user.id %}
+	<table class="semester">
+	<thead id="title">
+		<td colspan=3> SEMESTER: {{semester.semester}} </td>
+	</thead>
+	<tr>
+		<th>SUBJECT</th>
+		<th>MARKS OBTAINED</th>
+		<th>CREDITS</th>
+	</tr>
+
+	{% for i in semester.subject %}
+	{% if i.author == user.id %}
+	<tr>
+	<td>
+		{{i.subject_name}}
+	</td>
+	<td>
+		{{i.marks_obtained}}
+	</td>
+	<td>
+		{{i.credit}}
+	</td>
+	</tr>
+	{% endif %}
+	{% endfor %}
+	<tfoot id="title">
+		<td colspan="3">SGPA: {{semester.sgpa}}</td>
+	</tfoot>
+	</table>
+	{% endif %}
+	{% endfor %}
+</div>
+{% endblock %}
+
+<!-- <p id="title"> Semester: {{semester.semester}} </p> -->
+<!-- <p id="title"> SGPA: {{semester.sgpa}} </p> -->

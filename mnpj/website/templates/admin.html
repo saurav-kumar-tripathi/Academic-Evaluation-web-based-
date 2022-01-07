@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+{% block csslink %}
+
+<style type="text/css">
+
+.student-card{
+	float: left;
+	border: 1px solid darkcyan;
+	border-radius: 7px;
+	width: 350px;
+	text-align: center;
+	background: white;
+	color: darkcyan;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+#button{
+	border: 1px solid darkcyan;
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	background: darkcyan;
+	font-size: 15px;
+	padding: 7px;
+}
+#button:hover{
+	background: white;
+	color: darkcyan;
+}
+
+.table-container{
+	width: 100%;
+	overflow: scroll;
+	border: 1px solid black;
+	margin-top: 30px;
+	margin-bottom: 22px;
+}
+table{
+	height: 280px;
+	width: 100%;
+	overflow: hidden;
+	font-size: 21px;
+	text-align: center;
+
+}
+thead{
+	font-size: 25px;
+	font-weight: bolder;
+}
+input[type="submit"]{
+	width: 90%;
+}
+.s-b-c{
+	text-align: center;
+}
+input[type="text"]{
+	border: none;
+	border-bottom: 1px solid black;
+	font-size: 19px;
+	text-align: center;
+}
+input[type="text"]:focus{
+	outline: none;
+}
+
+
+</style>
+
+{% endblock %}
+
+{% block title %} Admin Login {% endblock %}
+
+{% block body %}
+
+
+	{% if user.position == "admin" %}
+<div class="table-container">
+<table cellpadding="10" cellspacing="10">
+	<thead>
+		<td colspan="9">ENTER STUDENT ACADEMIC DETAILS</td>
+	</thead>
+	<form action="#" method="POST">
+		<tr>
+			<td>UNIVERSITY ROLL</td>
+			<td>SEMESTER</td>
+			<td>|</td>
+			<td rowspan="2" style="transform: rotate(270deg);">SUBJECT</td>
+			<td><input type="text" placeholder="CAREER SKILLS MARKS" name="subject1" /></td>
+			<td><input type="text" placeholder="OPERATING SYSTEM MARKS" name="subject2" /></td>
+			<td><input type="text" placeholder="SYSTEM SOFTWARE MARKS" name="subject3" /></td>
+			
+		</tr>
+		<tr>
+			<td></td><td></td><td></td>
+			<td><input type="text" placeholder="DBMS MARKS" name="subject4" /></td>
+			<td><input type="text" placeholder="ELECTIVE MARKS" name="subject5" /></td>
+			<td><input type="text" placeholder="DAA MARKS" name="subject6" /></td>
+		</tr>
+		<tr>
+			<td><input type="text" placeholder="UNIVERSITY ROLL" name="uRoll" /></td>
+			<td><input type="text" placeholder="ENTER SEMESTER NO." name="semester" /></td>
+			<td>|</td>
+			<td rowspan="2" style="transform: rotate(270deg);">CREDITS</td>
+			<td><input type="text" placeholder="CAREER SKILLS CREDITS" name="credit1" /></td>
+			<td><input type="text" placeholder="OPERATING SYSTEM CREDITS" name="credit2" /></td>
+			<td><input type="text" placeholder="SYSTEM SOFTWARE CREDITS" name="credit3" /></td>
+			
+		</tr>
+		
+		<tr>
+			<td></td><td></td><td></td>
+			<td><input type="text" placeholder="DBMS CREDITS" name="credit4" /></td>
+			<td><input type="text" placeholder="ELECTIVE CREDITS" name="credit5" /></td>
+			<td><input type="text" placeholder="DAA CREDITS" name="credit6" /></td>
+		</tr>
+		<p class="s-b-c">
+<input type="submit" value="submit" id="button">
+</p>
+	</form>
+</table>
+</div>
+
+
+
+	
+		{% for u in users %}
+		{% if u.position == 'student' %}
+		<div class="student-card">
+		<p> Name: {{u.username}} </p>
+		<p> University Roll No.: {{u.university_roll}} </p>
+		<p> Enrollment Roll No.: {{u.id+1900}} </p>
+		</div>
+		{% endif %}
+		{% endfor %}
+	
+
+	{% endif %}
+<br/><br/><br/><br/><br/>
+{% endblock %}

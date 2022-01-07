@@ -1,0 +1,46 @@
+html,
+body{
+	background: rgb(220, 220, 220);
+}
+
+.personal-details{
+	float: left;
+	width: 26%;
+	margin: 10px;
+	padding: 20px;
+	border-right: 1px solid #404040;
+	text-transform: uppercase;
+	font-size: 22px;
+}
+.personal-details p{
+	padding: 10px;
+}
+.acadmic-details{
+	float: right;
+	width: 66%;
+	margin: 10px;
+	padding: 20px;
+}
+.semester{
+	border: 2px solid #404040;
+	border-radius: 25px;
+	color: white;
+	background: linear-gradient(#e8491d, #FF5C5C);
+	font-weight: bolder;
+	margin: 5px;
+	padding: 10px;
+	width: 300px;
+	float: left;
+	opacity: 0.9;
+}
+.semester:hover{
+	opacity: 1;
+}
+.semester #title{
+	text-align: center;
+	border-bottom: 1px solid white;
+}
+
+th, td{
+	padding: 10px;
+}

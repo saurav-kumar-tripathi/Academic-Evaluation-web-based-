@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block csslink %}
+<style type="text/css">
+
+form{
+	border: 1px solid darkcyan;
+	border-radius: 10px;
+	height: 30vh;
+	width: 40vw;
+	text-align: center;
+	margin-left: 30vw;
+	margin-top: 24vh;
+	padding: 10px;
+}
+input{
+	font-size: 20px;
+	width: 90%;
+	margin: 10px;
+}
+input:focus{
+	outline: none;
+}
+input[type="submit"]{
+	background: darkcyan;
+	border: 1px solid darkcyan;
+	color: white;
+	padding: 5px;
+	letter-spacing: 6px;
+}
+input[type="submit"]:hover{
+	background: white;
+	color: darkcyan;
+}
+
+
+</style>
+{% endblock %}
+
+{% block title %} Admin Login {% endblock %}
+
+{% block body %}
+
+	<form action='#', method='POST'>
+		<p>
+			<input type="text" placeholder="--USERNAME--" name='userName' />
+		</p>
+		<p>
+			<input type="password" placeholder="--PASSWORD--" name='password1' />
+		</p>
+		<p>
+			<input type="password" placeholder="--CONFIRM PASSWORD--" name='password2' />
+		</p>
+
+		<p>
+			<input type="submit" value='SUBMIT' />
+		</p>
+	</form>
+
+{% endblock %}
